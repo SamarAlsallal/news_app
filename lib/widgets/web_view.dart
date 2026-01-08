@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class ArticlesView extends StatefulWidget {
-  const ArticlesView({super.key,required this.url});
+class WebView extends StatefulWidget {
+  const WebView({super.key,required this.url});
    final String url;
 
   @override
-  State<ArticlesView> createState() => _ArticlesViewState();
+  State<WebView> createState() => _WebViewState();
 }
 
-class _ArticlesViewState extends State<ArticlesView> {
+class _WebViewState extends State<WebView> {
  late final WebViewController controller;
   bool isLoading = true;
 

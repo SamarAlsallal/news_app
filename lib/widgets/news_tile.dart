@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:news_app/Models/article_model.dart';
-import 'package:news_app/widgets/Articles_view.dart';
+import 'package:news_app/widgets/web_view.dart';
 
 class Newstile extends StatelessWidget {
   const Newstile({super.key, required this.articlemodel});
@@ -14,7 +14,7 @@ class Newstile extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => ArticlesView(url: articlemodel.url!),
+              builder: (context) => WebView(url: articlemodel.url!),
             ),
           );
         }
@@ -29,7 +29,7 @@ class Newstile extends StatelessWidget {
               placeholder: (context, url) => CircularProgressIndicator(),
               errorWidget: (context, url, error) => Image.asset('news.jpg'),
             ),
-      
+
             Text(
               articlemodel.title,
               style: TextStyle(
