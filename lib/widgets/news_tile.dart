@@ -8,31 +8,29 @@ class Newstile extends StatelessWidget {
   final ArticleModel articlemodel;
   @override
   Widget build(BuildContext context) {
-   
     return GestureDetector(
       onTap: () {
         if (articlemodel.url != null && articlemodel.url!.isNotEmpty) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) =>
-            ArticlesView(url: articlemodel.url!),
-      ),
-    );
-  }
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ArticlesView(url: articlemodel.url!),
+            ),
+          );
+        }
       },
-    
+
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Column(
           children: [
-          CachedNetworkImage(
-        imageUrl: articlemodel.img ?? "",
-        placeholder: (context, url) => CircularProgressIndicator(),
-        errorWidget: (context, url, error) => Image.asset('news.jpg'),
-      ),
+            CachedNetworkImage(
+              imageUrl: articlemodel.img!,
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Image.asset('news.jpg'),
+            ),
       
-             Text(
+            Text(
               articlemodel.title,
               style: TextStyle(
                 fontSize: 22,
@@ -42,8 +40,12 @@ class Newstile extends StatelessWidget {
               ),
             ),
             Text(
-              articlemodel.subtitle??'',
-              style: TextStyle(fontSize: 12, color: Colors.grey ,fontWeight: FontWeight.w400),
+              articlemodel.subtitle ?? '',
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.grey,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ],
         ),

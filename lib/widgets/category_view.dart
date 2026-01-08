@@ -7,12 +7,12 @@ class CategoryView extends StatelessWidget {
   const CategoryView({super.key});
 
   final List<CategoryModel> categories = const [
-    CategoryModel(text: 'Entertainment', img: 'entertiment.jpg'),
-    CategoryModel(text: 'Health', img: 'health.jpg'),
-    CategoryModel(text: 'Science', img: 'sicence.jpg'),
-    CategoryModel(text: 'Business', img: 'bussniess.jpg'),
-    CategoryModel(text: 'Sports', img: 'sport.jpg'),
-    CategoryModel(text: 'Technology', img: 'technology.jpeg'),
+    CategoryModel(text: 'Entertainment', img: 'assets/entertiment.jpg'),
+    CategoryModel(text: 'Health', img: 'assets/health.jpg'),
+    CategoryModel(text: 'Science', img: 'assets/sicence.jpg'),
+    CategoryModel(text: 'Business', img: 'assets/bussniess.jpg'),
+    CategoryModel(text: 'Sports', img: 'assets/sport.jpg'),
+    CategoryModel(text: 'Technology', img: 'assets/technology.jpeg'),
   ];
   @override
   Widget build(BuildContext context) {

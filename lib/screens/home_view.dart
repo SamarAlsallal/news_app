@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:news_app/widgets/category_view.dart';
 import 'package:news_app/widgets/news_view_builder.dart';
 
-
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -16,27 +15,28 @@ class HomeView extends StatelessWidget {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('News',style: TextStyle(fontWeight: FontWeight.bold),),
-            Text('App', style: TextStyle(color: Colors.yellow ,fontWeight: FontWeight.bold)),
+            Text('News', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(
+              'Cloud',
+              style: TextStyle(
+                color: Colors.yellow,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ],
         ),
       ),
-      body: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: CategoryView()
-          ),
-          SliverToBoxAdapter(
-           child:SizedBox(
-            height: 15,
-           )
-          ),
-          
-         Newsviewbuilder(categoryName: 'general'),
-          
-        ],
-      )
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(child: CategoryView()),
+            SliverToBoxAdapter(child: SizedBox(height: 15)),
 
+            Newsviewbuilder(categoryName: 'general'),
+          ],
+        ),
+      ),
     );
   }
 }
