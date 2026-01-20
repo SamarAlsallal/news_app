@@ -15,12 +15,19 @@ class HomeView extends StatelessWidget {
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('News', style: TextStyle(fontWeight: FontWeight.bold)),
             Text(
-              'Cloud',
+              'Daily',
               style: TextStyle(
-                color: Colors.yellow,
                 fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),
+            ),
+            Text(
+              'News',
+              style: TextStyle(
+                color: Colors.orange,
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
               ),
             ),
           ],

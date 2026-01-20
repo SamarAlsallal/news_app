@@ -25,9 +25,11 @@ class Newstile extends StatelessWidget {
         child: Column(
           children: [
             CachedNetworkImage(
-              imageUrl: articlemodel.img!,
-              placeholder: (context, url) => CircularProgressIndicator(),
-              errorWidget: (context, url, error) => Image.asset('news.jpg'),
+              imageUrl: articlemodel.img ?? '',
+              placeholder: (context, url) =>
+                  const Center(child: CircularProgressIndicator()),
+              errorWidget: (context, url, error) =>
+                  Image.asset('assets/news.jpg', fit: BoxFit.cover),
             ),
 
             Text(
