@@ -29,5 +29,4 @@ Flutter & Mobile Developer
 GitHub: https://github.com/SamarAlsallal
 
 
-https://github.com/user-attachments/assets/f5c774a9-0fb9-4dd0-b6cd-3c30aaf22cd5
 
